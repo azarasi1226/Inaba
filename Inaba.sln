@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inaba.Domain", "Inaba.Domai
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inaba.Application", "Inaba.Application\Inaba.Application.csproj", "{308D3ECF-AC3E-4263-ADE6-B47791BEE08E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inaba.Infrastructure", "Inaba.Infrastructure\Inaba.Infrastructure.csproj", "{951EFE7D-47B5-420C-A695-F085F5472529}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{308D3ECF-AC3E-4263-ADE6-B47791BEE08E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{308D3ECF-AC3E-4263-ADE6-B47791BEE08E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{308D3ECF-AC3E-4263-ADE6-B47791BEE08E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{951EFE7D-47B5-420C-A695-F085F5472529}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{951EFE7D-47B5-420C-A695-F085F5472529}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{951EFE7D-47B5-420C-A695-F085F5472529}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{951EFE7D-47B5-420C-A695-F085F5472529}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
