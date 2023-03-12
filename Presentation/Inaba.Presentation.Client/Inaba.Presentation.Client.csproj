@@ -18,4 +18,8 @@
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="7.0.3" PrivateAssets="all" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Protobuf Include="../Protos/*.proto" GrpcServices="Client" />
+  </ItemGroup>
+
 </Project>

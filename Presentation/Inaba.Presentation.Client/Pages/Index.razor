@@ -1,9 +1,32 @@
 ﻿@page "/"
+@using Grpc.Net.Client;
+@using Inaba.Presentation.gRPC;
+
+@inject GrpcChannel Channel
 
 <PageTitle>Index</PageTitle>
 
-<h1>Hello, world!</h1>
+<h1>@_message</h1>
 
 Welcome to your new app.
 
 <SurveyPrompt Title="How is Blazor working for you?" />
+
+
+@code {
+    private string _message;
+
+    protected async override Task OnInitializedAsync()
+    {
+        var client = new Greeter.GreeterClient(Channel);
+        var request = new HelloRequest()
+            {
+                Name = "アンドウカズキ"
+            };
+
+
+        var response = await client.SayHelloAsync(request);
+
+        _message = response.Message;
+    }
+}
