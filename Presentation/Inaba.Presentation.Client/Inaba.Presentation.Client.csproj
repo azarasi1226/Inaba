@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Protobuf Include="../Protos/*.proto" GrpcServices="Client" />
+    <Protobuf Include="../Inaba.Presentation.gRPC/*.proto" GrpcServices="Client" />
   </ItemGroup>
 
 </Project>
