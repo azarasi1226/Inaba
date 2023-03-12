@@ -1,5 +1,5 @@
 using Grpc.Core;
-using Inaba.Presentation.Server;
+using Inaba.Presentation.gRPC;
 
 namespace Inaba.Presentation.Server.Services
 {

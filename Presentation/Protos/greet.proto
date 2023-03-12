@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option csharp_namespace = "Inaba.Presentation.Server";
+option csharp_namespace = "Inaba.Presentation.gRPC";
 
 package greet;
 

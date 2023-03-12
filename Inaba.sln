@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentatio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inaba.Presentation.Server", "Presentation\Inaba.Presentation.Server\Inaba.Presentation.Server.csproj", "{75E7D21F-D1BC-44DA-A289-AF1CF48D0845}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inaba.Presentation.Client", "Presentation\Inaba.Presentation.Client\Inaba.Presentation.Client.csproj", "{AB6BAB33-9732-4954-BD5D-7BD9C13977CD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,12 +37,17 @@ Global
 		{75E7D21F-D1BC-44DA-A289-AF1CF48D0845}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75E7D21F-D1BC-44DA-A289-AF1CF48D0845}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75E7D21F-D1BC-44DA-A289-AF1CF48D0845}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB6BAB33-9732-4954-BD5D-7BD9C13977CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB6BAB33-9732-4954-BD5D-7BD9C13977CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB6BAB33-9732-4954-BD5D-7BD9C13977CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB6BAB33-9732-4954-BD5D-7BD9C13977CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{75E7D21F-D1BC-44DA-A289-AF1CF48D0845} = {85002EF7-CCBB-4E77-B724-A56A5C70CD4A}
+		{AB6BAB33-9732-4954-BD5D-7BD9C13977CD} = {85002EF7-CCBB-4E77-B724-A56A5C70CD4A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {21D34F6D-B7DE-4492-9288-7E7789E2DBF4}
