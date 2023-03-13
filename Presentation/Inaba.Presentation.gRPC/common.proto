@@ -1,0 +1,16 @@
+﻿syntax = "proto3";
+
+package image;
+
+option csharp_namespace = "Inaba.Presentation.gRPC";
+
+message PagingCondition {
+	int32 pageSize = 1;
+	int32 pageNumber = 2;
+}
+
+message Paging {
+	int32 totalCount = 1;
+	int32 pageSize = 2;
+	int32 pageNumber = 3;
+}

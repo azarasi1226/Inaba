@@ -1,8 +1,8 @@
 ﻿syntax = "proto3";
 
-option csharp_namespace = "Inaba.Presentation.gRPC";
 
-package greet;
+
+option csharp_namespace = "Inaba.Presentation.gRPC";
 
 // The greeting service definition.
 service Greeter {
