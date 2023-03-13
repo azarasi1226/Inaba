@@ -12,7 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
-		<Protobuf Include="../Inaba.Presentation.gRPC/*.proto" GrpcServices="Server" />
+		<Protobuf Include="../Inaba.Presentation.gRPC/**/*.proto" GrpcServices="Server"
+							ProtoRoot="../Inaba.Presentation.gRPC"/>
   </ItemGroup>
 	
 </Project>

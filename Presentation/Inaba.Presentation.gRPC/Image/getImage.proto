@@ -1,9 +1,9 @@
 ﻿syntax = "proto3";
 
 package image;
-import "common.proto";
+import "Common/paging.proto";
 
-option csharp_namespace = "Inaba.Presentation.gRPC";
+option csharp_namespace = "Inaba.Presentation.gRPC.Image";
 
 service ImageService {
 	rpc GetImageRankings(GetImageRankingsRequest) returns (GetImageRankingsResponse);
@@ -12,12 +12,12 @@ service ImageService {
 message GetImageRankingsRequest {
 	AgeRating agerating = 1;
 	RankingInterval rankingInterval = 2;
-	image.PagingCondition pageCondition = 3;
+	common.PagingCondition pageCondition = 3;
 }
 
 message GetImageRankingsResponse {
 	repeated ImageThumbnail items = 1;
-	image.Paging paging = 2;
+	common.PagingResult pagingResult = 2;
 }
 
 message ImageThumbnail {
@@ -38,6 +38,7 @@ enum AgeRating {
 	All = 0;
 	R18 = 1;
 }
+
 enum RankingInterval {
 	Daily = 0;
 	Weekly = 1;

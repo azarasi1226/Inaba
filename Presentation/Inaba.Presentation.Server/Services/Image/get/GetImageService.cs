@@ -1,5 +1,6 @@
 ﻿using Grpc.Core;
-using Inaba.Presentation.gRPC;
+using Inaba.Presentation.gRPC.Image;
+using Inaba.Presentation.gRPC.Common;
 
 namespace Inaba.Presentation.Server.Services.Image.get
 {
@@ -30,7 +31,7 @@ namespace Inaba.Presentation.Server.Services.Image.get
 
             var b = new GetImageRankingsResponse()
             {
-                Paging = new Paging
+                PagingResult = new PagingResult
                 {
                     PageSize = 15,
                     PageNumber = 13,
