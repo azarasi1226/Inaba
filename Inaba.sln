@@ -11,11 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inaba.Infrastructure", "Ina
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{85002EF7-CCBB-4E77-B724-A56A5C70CD4A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inaba.Presentation.Server", "Presentation\Inaba.Presentation.Server\Inaba.Presentation.Server.csproj", "{75E7D21F-D1BC-44DA-A289-AF1CF48D0845}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inaba.Presentation.Server", "Presentation\Inaba.Presentation.Server\Inaba.Presentation.Server.csproj", "{75E7D21F-D1BC-44DA-A289-AF1CF48D0845}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inaba.Presentation.Client", "Presentation\Inaba.Presentation.Client\Inaba.Presentation.Client.csproj", "{AB6BAB33-9732-4954-BD5D-7BD9C13977CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inaba.Presentation.Client", "Presentation\Inaba.Presentation.Client\Inaba.Presentation.Client.csproj", "{AB6BAB33-9732-4954-BD5D-7BD9C13977CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inaba.Presentation.gRPC", "Presentation\Inaba.Presentation.gRPC\Inaba.Presentation.gRPC.csproj", "{116018C3-A9C0-4319-9FCC-C3C30D1D2F2B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inaba.Presentation.gRPC", "Presentation\Inaba.Presentation.gRPC\Inaba.Presentation.gRPC.csproj", "{116018C3-A9C0-4319-9FCC-C3C30D1D2F2B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
