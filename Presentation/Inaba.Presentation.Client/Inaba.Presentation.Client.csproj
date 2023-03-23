@@ -23,4 +23,8 @@
     <Protobuf Include="../Inaba.Presentation.gRPC/**/*.proto" GrpcServices="Client" ProtoRoot="../Inaba.Presentation.gRPC" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\js\" />
+  </ItemGroup>
+
 </Project>
