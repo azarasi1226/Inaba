@@ -4,7 +4,8 @@
 
 <AuthorizeView>
     <Authorized>
-        <a href="authentication/profile">Hello, @context.User.Identity?.Name!</a>
+        <RadzenImage Path="https://oreno3d.com/storage/thumbnails_small/63f9ce3ac44f7"
+                     class="rounded-full w-9 h-9" />
         <button class="nav-link btn btn-link" @onclick="BeginLogOut">Log out</button>
     </Authorized>
     <NotAuthorized>

@@ -1,18 +1,90 @@
 ﻿@inherits LayoutComponentBase
 
-<div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
+<RadzenLayout>
+    <RadzenHeader>
+        <RadzenStack Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.SpaceBetween" AlignItems="AlignItems.Center"
+                     class="select-none">
+            @*メニュー・ロゴ*@
+            <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center">
+                <RadzenSidebarToggle Click="() => _isSidebarExpand = !_isSidebarExpand" />
+                <a href="/">
+                    <RadzenImage Path="	/image/logo.svg"
+                                 class="h-7" />
+                </a>
+            </RadzenStack>
 
-    <main>
-        <div class="top-row px-4 auth">
-            <LoginDisplay />
-            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
-        </div>
+            @*検索*@
+            <RadzenStack Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.Center" AlignItems="AlignItems.Center" Gap="0">
+                <RadzenTextBox @onfocus="() => _isSearchFormFocus = true" @onblur="() => _isSearchFormFocus = false"
+                               class="hidden md:block w-96" />
+            </RadzenStack>
 
-        <article class="content px-4">
-            @Body
-        </article>
-    </main>
-</div>
+            @*アイコン・操作ボタン群*@
+            <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center">
+                @*スマホ用検索ボタン*@
+                <div class="block md:hidden flex justify-center items-center rounded-full hover:bg-gray-300 w-8 h-8 cursor-pointer">
+                    @*TODO: Iconボタンとして切り出すか検討*@
+                    <RadzenIcon Icon="search" IconStyle="IconStyle.Info"
+                                @onclick="() => Console.WriteLine('a')"
+                                class="text-2xl" />
+                </div>
+                <LoginDisplay />
+            </RadzenStack>
+
+        </RadzenStack>
+    </RadzenHeader>
+    <RadzenSidebar @bind-Expanded="_isSidebarExpand" Responsive="false"
+                   class="w-40">
+        <RadzenPanelMenu>
+            <RadzenStack Gap="0">
+                <div>
+                </div>
+
+                <div>
+                    <RadzenPanelMenuItem Path="/" Text="Home" Icon="home" />
+                </div>
+                <div class="mt-8">
+                    <RadzenText TextStyle="TextStyle.Subtitle1"
+                                class="rz-background-color-base-800 rz-color-white pl-2">
+                        Search
+                    </RadzenText>
+                    <div class="menu-group">
+                        <RadzenPanelMenuItem Path="/parodies" Text="Pardies" Icon="account_box" />
+                        <RadzenPanelMenuItem Path="/characters" Text="Characters" Icon="account_box" />
+                        <RadzenPanelMenuItem Path="/tags" Text="Tags" Icon="sell" />
+                        <RadzenPanelMenuItem Path="/creators" Text="Creators" Icon="account_box" />
+                    </div>
+                </div>
+                <div class="mt-8">
+                    <RadzenText TextStyle="TextStyle.Subtitle1"
+                                class="rz-background-color-base-800 rz-color-white pl-2">
+                        My
+                    </RadzenText>
+                    <div class="menu-group">
+                        <RadzenPanelMenuItem Path="/favorites" Text="Favorites" Icon="favorite" />
+                        <RadzenPanelMenuItem Path="/users/1234/historys" Text="Historys" Icon="history" />
+                        <RadzenPanelMenuItem Path="/users/1234/BoockMarks" Text="BoockMarks" />
+                    </div>
+                </div>
+            </RadzenStack>
+        </RadzenPanelMenu>
+    </RadzenSidebar>
+    <RadzenBody class="p-0">
+        @Body
+    </RadzenBody>
+</RadzenLayout>
+
+
+@* menu open時の操作ガード *@
+@if (_isSidebarExpand)
+{
+    <div @onclick="() => _isSidebarExpand = false"
+         class="abc"></div>
+}
+
+
+@code {
+    private ElementReference _searchForm_searchForm;
+    private bool _isSidebarExpand = false;
+    private bool _isSearchFormFocus = false;
+}
